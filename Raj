@@ -1,0 +1,62 @@
+Assume there are N persons and each person needs exactly one cab. For each person, you are given the start time and end time (both inclusive) during which that person will travel. Find the minimum number of cabs required.
+
+Input Format
+
+First line contains an integer, N(1,<=N<=10^5) denoting the number of persons. Next N lines contains 4 integersHH1,MM1,HH2,and MM2, (0<=HH1,HH2<=23) (0<=MM1,MM2<=59), denoting the start time (HH1:MM1) and end time (HH2:MM2). It is guaranteed that start and end time will not span midnight.
+
+Output Format
+
+Print the minimum number of cabs required.
+
+ 
+
+Sample 1 Input
+
+Sample 1 Output
+
+6
+
+1 0 2 0
+
+16 0 21 30
+
+9 30 13 0
+
+21 30 22 30
+
+21 30 22 30
+
+12 0 12 30
+
+3
+
+
+
+
+
+import java.util.*;
+public class qn1 {
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+int num;
+System.out.print("Enter your number :");
+Scanner in = new Scanner(System.in);
+num=in.nextInt();
+for(int i=1 ; i<=num;i++) {
+for(int j=1 ; j<=num;j++) {
+if(i==1 || i==num) {
+System.out.print(j);
+}
+else {
+if(i==num-j+1) {
+System.out.print(j);
+}
+else {
+System.out.print(" ");
+}
+}
+}
+System.out.println("");
+}
+}
+}
